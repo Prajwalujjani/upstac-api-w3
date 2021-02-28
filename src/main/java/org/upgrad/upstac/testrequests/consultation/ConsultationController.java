@@ -76,9 +76,8 @@ public class ConsultationController {
         //Make use of the findByDoctor() method from testRequestQueryService class to get the list
         // For reference check the method getForTests() method from LabRequestController class
 
-        // replace this line of code with your implementation
-        throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED,"Not implemented");
-
+        User doctor =userLoggedInService.getLoggedInUser();
+        return testRequestQueryService.findByDoctor(doctor);
 
 
 
